@@ -4,7 +4,7 @@ import csv
 import requests # 2.5.3
 
 github_user = None
-github_passwird = None
+github_password = None
 repo = None   # format is username/repo
 state = None
 
