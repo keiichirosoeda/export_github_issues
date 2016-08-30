@@ -3,6 +3,9 @@ from getpass import getpass
 import csv
 import requests # 2.5.3
 
+github_user = ''
+
+
 GITHUB_USER = raw_input('username: ')
 GITHUB_PASSWORD = getpass('password: ')
 REPO = raw_input('repo ("username/repo"): ')  # format is username/repo
