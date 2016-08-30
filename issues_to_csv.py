@@ -3,14 +3,16 @@ from getpass import getpass
 import csv
 import requests # 2.5.3
 
-github_user = ''
+github_user = None
+github_passwird = None
+repo = None   # format is username/repo
+state = None
 
-
-GITHUB_USER = raw_input('username: ')
-GITHUB_PASSWORD = getpass('password: ')
-REPO = raw_input('repo ("username/repo"): ')  # format is username/repo
-state = raw_input('state ("open", "closed", "all", default=all): ')
-STATE = state if state is not None else 'all'
+GITHUB_USER = raw_input('username: ') if github_user is None else github_user
+GITHUB_PASSWORD = getpass('password: ') if github_password is None else github_password
+REPO = raw_input('repo ("username/repo"): ') if repo is None else repo
+state = raw_input('state ("open", "closed", "all", default=all): ') if state is None else state
+STATE = state if state is None else 'all'
 print 'Exporting issues...'
 ISSUES_FOR_REPO_URL = 'https://api.github.com/repos/%s/issues?state=%s' % (REPO, STATE)
 AUTH = (GITHUB_USER, GITHUB_PASSWORD)
