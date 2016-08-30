@@ -8,16 +8,16 @@ Please just Simply follow the interactive console and carefully provide required
 ```
 $ python issues_to_csv.py
   username: (ex. keiichirosoeda)
-  password: ********
-  repo (username/repo): (ex. keiichirosoeda/issues_to_csv)
-  state ("open", "closed", "all", default=all): (ex. open)
+  password: (ex. ********)
+  repo: (ex. keiichirosoeda/issues_to_csv)
+  state: (ex. open)
 ```
 
-If typing those things bothers you, just replace `github_user`, `github_password`, `repo` and `state` like this:
+If typing those things bothers you, just replace `github_user`, `github_password`, `repo` and `state` with your own like this:
 ```
 github_user = 'keiichirosoeda'
 github_password = '********'
 repo = 'keiichirosoeda/issues_to_csv'
 state = 'all'
 ```
-so that it won't ask you for information anymore.
+so it won't ask you for information anymore.
